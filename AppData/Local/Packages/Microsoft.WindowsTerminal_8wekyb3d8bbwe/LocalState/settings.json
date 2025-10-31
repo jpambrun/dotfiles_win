@@ -33,7 +33,7 @@
     "alwaysShowTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": true,
-    "defaultProfile": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+    "defaultProfile": "{2b27e1ad-dbb6-4b74-b3e5-f0cff59a8792}",
     "keybindings": 
     [
         {
@@ -96,39 +96,14 @@
                 "name": "Command Prompt"
             },
             {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "commandline": "%SystemRoot%\\System32\\wsl.exe",
+                "guid": "{2b27e1ad-dbb6-4b74-b3e5-f0cff59a8792}",
                 "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "colorScheme": 
-                {
-                    "light": "Catppuccin Latte"
-                },
-                "cursorShape": "filledBox",
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
-                "hidden": false,
-                "name": "Arch",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{8ab8e6f6-35c6-5b46-8419-3e1568105476}",
-                "hidden": false,
-                "name": "podman-machine-default",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{c397f356-5e7b-55bc-956b-8cb4b9762c26}",
-                "hidden": false,
-                "name": "NixOS",
-                "source": "Windows.Terminal.Wsl"
+                "icon": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.23.12811.0_x64__8wekyb3d8bbwe\\ProfileIcons\\{9acb9455-ca41-5af7-950f-6bca1bc9722f}.scale-200.png",
+                "name": "WSL",
+                "startingDirectory": "~",
+                "suppressApplicationTitle": true,
+                "tabTitle": "WSL"
             }
         ]
     },
