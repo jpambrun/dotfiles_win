@@ -1,0 +1,14 @@
+[wsl2]
+memory=6GB
+processors=8
+swap=8GB
+guiApplications=false
+firewall=false
+autoProxy=false
+networkingMode=mirrored
+
+
+
+
+[experimental]
+autoMemoryReclaim=gradual
