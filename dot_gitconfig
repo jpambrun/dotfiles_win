@@ -1,0 +1,24 @@
+[user]
+	email = jf.pambrun@gmail.com
+	name = JF Pambrun
+
+	[color]
+    status = auto
+    branch = auto
+    diff = auto
+    interactive = auto
+
+  [alias]
+      st = status
+      ci = commit -v
+      br = branch
+      co = checkout
+      df = diff
+      lg  = log --color --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+      b = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+[push]
+	default = simple
+[credential]
+	helper = store
+[diff "image"]
+	command = ~/bin/git-imgdiff
