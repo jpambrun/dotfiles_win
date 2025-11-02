@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "scrollbar": {
+    "show": "always"
+  },
+  "scroll_beyond_last_line": "off",
   "show_completion_documentation": true,
   "diagnostics": {
     "inline": {
@@ -23,7 +27,7 @@
   },
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
       "model": "grok-code-fast-1"
@@ -61,11 +65,14 @@
     "current_line_highlight": "none",
     "thumb_border": "none",
     "thumb": "always",
-    "show": "auto"
+    "show": "never"
   },
   "relative_line_numbers": false,
   "auto_signature_help": true,
   "helix_mode": true,
+  "vim":{
+    "use_system_clipboard": "never"
+  },
   "cursor_shape": "block",
   "ui_font_family": ".ZedSans",
   "buffer_font_weight": 400.0,

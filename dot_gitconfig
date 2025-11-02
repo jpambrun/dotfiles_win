@@ -1,24 +1,67 @@
 [user]
-	email = jf.pambrun@gmail.com
-	name = JF Pambrun
+  email = jf.pambrun@gmail.com
+  name = JF Pambrun
 
-	[color]
-    status = auto
-    branch = auto
-    diff = auto
-    interactive = auto
+[core]
+  ; editor = vim
+  #pager = delta --light --line-numbers
 
-  [alias]
-      st = status
-      ci = commit -v
-      br = branch
-      co = checkout
-      df = diff
-      lg  = log --color --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-      b = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+[interactive]
+  ; diffFilter = delta --color-only
+
+[delta]
+  theme = 'GitHub'
+
+[merge]
+  tool = meld
+	conflictstyle = zdiff3
+
+[color]
+  status = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+
+[alias]
+  st = status
+  ci = commit -v
+  br = branch
+  co = checkout
+  df = diff
+  lg  = log --color --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  b = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	ignore = update-index --skip-worktree
+	unignore = update-index --no-skip-worktree
+	ignored = !git ls-files -v | grep \"^S\"
 [push]
 	default = simple
+	autoSetupRemote = true
 [credential]
 	helper = store
-[diff "image"]
-	command = ~/bin/git-imgdiff
+; [diff "image"]
+	; command = ~/bin/git-imgdiff
+
+[url "https://github.com/"]
+    insteadOf = "gh:"
+
+[pager]
+    ; difftool = true
+[credential "https://github.com"]
+        helper =
+        helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+        helper =
+        helper = !/usr/bin/gh auth git-credential
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[commit]
+	verbose = true
