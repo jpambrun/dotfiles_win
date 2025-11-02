@@ -1,0 +1,17 @@
+dictionaries = ["en_us"]
+words = [
+    "dcm",
+    "dicom",
+    "egui",
+    "syntaxes",
+    "wgpu",
+]
+flag_words = [
+    "todo",
+    "fixme",
+]
+ignore_paths = [
+    "target/**/*",
+    "**/*.json",
+    ".git/**/*",
+]
