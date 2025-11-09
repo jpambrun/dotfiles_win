@@ -1,8 +1,12 @@
 dictionaries = ["en_us"]
 words = [
+    "adva",
+    "advapacs",
+    "ahs",
     "dcm",
     "dicom",
     "egui",
+    "pacs",
     "syntaxes",
     "wgpu",
 ]

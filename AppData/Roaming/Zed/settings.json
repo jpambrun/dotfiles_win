@@ -7,118 +7,145 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "scrollbar": {
-    "show": "always"
-  },
-  "scroll_beyond_last_line": "off",
-  "show_completion_documentation": true,
-  "diagnostics": {
-    "inline": {
-      "enabled": true
-    }
-  },
-  "hover_popover_enabled": true,
-  "inlay_hints": {
-    "enabled": false
-  },
-  "tab_size": 2,
-  "git_panel": {
-    "dock": "right"
-  },
-  "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "ask",
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "grok-code-fast-1"
-    },
-    "model_parameters": []
-  },
-  "auto_update": false,
-  "git": {
-    "inline_blame": {
-      "show_commit_summary": true
-    }
-  },
-  "title_bar": {
-    "show_branch_icon": true
-  },
-  "tabs": {
-    "file_icons": false,
-    "git_status": true
-  },
-  "languages": {
-    "TypeScript": {
-      "show_whitespaces": "trailing",
-      // "language_servers": ["codebook"]
-    },
-    "JavaScript": {
-      "show_whitespaces": "trailing"
-    }
-  },
-  "indent_guides": {
-    "background_coloring": "indent_aware",
-    "coloring": "fixed"
-  },
-  "format_on_save": "off",
-  "minimap": {
-    "current_line_highlight": "none",
-    "thumb_border": "none",
-    "thumb": "always",
-    "show": "never"
-  },
-  "relative_line_numbers": false,
-  "auto_signature_help": true,
-  "helix_mode": true,
-  "vim":{
-    "use_system_clipboard": "never"
-  },
-  "cursor_shape": "block",
-  "ui_font_family": ".ZedSans",
-  "buffer_font_weight": 400.0,
-  "buffer_font_family": "Monaspace Neon",
-  "vim_mode": false,
-  "icon_theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Zed (Default)"
-  },
-  "ui_font_size": 18.0,
-  "buffer_font_size": 16.0,
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "One Dark"
-  },
-  "notification_panel": {
-    "dock": "left"
-  },
-  "outline_panel": {
-    "dock": "right"
-  },
-  "project_panel": {
-    "dock": "right"
-  },
-  "auto_install_extensions": {
-    "catppuccin": true,
-    "catppuccin-icons" : true,
-    "codebook": true,
-    "biome" : true
-  },
-  "features":{
-    "edit_prediction_provider": "copilot"
-  },
-  "file_scan_exclusions": [
-    "**/.git",
-    "**/.svn",
-    "**/.hg",
-    "**/.jj",
-    "**/.repo",
-    "**/CVS",
-    "**/.DS_Store",
-    "**/Thumbs.db",
-    "**/.classpath",
-    "**/bun.lock",
-    "**/.settings"
-  ],
+	"scrollbar": {
+		"show": "always"
+	},
+	"use_autoclose": false,
+	"auto_indent": false,
+	"scroll_beyond_last_line": "one_page",
+	"show_completion_documentation": true,
+	"edit_predictions": {
+		"mode": "subtle"
+	},
+	"diagnostics": {
+		"inline": {
+			"enabled": true
+		}
+	},
+	"hover_popover_enabled": true,
+	"inlay_hints": {
+		"enabled": false
+	},
+	"tab_size": 2,
+	"git_panel": {
+		"dock": "right"
+	},
+	"agent": {
+		"inline_assistant_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-5-mini"
+		},
+		"always_allow_tool_actions": true,
+		"default_profile": "write",
+		"default_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-5-mini"
+		},
+		"model_parameters": []
+	},
+	"auto_update": false,
+	"git": {
+		"inline_blame": {
+			"show_commit_summary": true
+		}
+	},
+	"title_bar": {
+		"show_branch_icon": true
+	},
+	"tabs": {
+		"file_icons": false,
+		"git_status": true
+	},
+	"show_whitespaces": "trailing",
+	"languages": {
+		"JavaScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"TypeScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"TSX": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+		"CSS": { "formatter": { "language_server": { "name": "biome" } } }
+	},
+	"indent_guides": {
+		"background_coloring": "indent_aware",
+		"coloring": "fixed"
+	},
+	"format_on_save": "off",
+	"minimap": {
+		"current_line_highlight": "none",
+		"thumb_border": "none",
+		"thumb": "always",
+		"show": "never"
+	},
+	"relative_line_numbers": false,
+	"auto_signature_help": false,
+	"helix_mode": true,
+	"vim": {
+		"use_system_clipboard": "never"
+	},
+	"cursor_shape": "block",
+	"ui_font_family": ".ZedSans",
+	"buffer_font_weight": 400.0,
+	"buffer_font_family": "Monaspace Neon",
+	"vim_mode": false,
+	"icon_theme": {
+		"mode": "system",
+		"light": "Catppuccin Latte",
+		"dark": "Zed (Default)"
+	},
+	"ui_font_size": 18.0,
+	"buffer_font_size": 16.0,
+	"theme": {
+		"mode": "system",
+		"light": "Catppuccin Latte",
+		"dark": "One Dark"
+	},
+	"notification_panel": {
+		"dock": "left"
+	},
+	"outline_panel": {
+		"dock": "right"
+	},
+	"project_panel": {
+		"dock": "right"
+	},
+	"auto_install_extensions": {
+		"catppuccin": true,
+		"catppuccin-icons": true,
+		"codebook": true,
+		"biome": true
+	},
+	"features": {
+		"edit_prediction_provider": "copilot"
+	},
+	"file_scan_exclusions": [
+		"**/.git",
+		"**/.svn",
+		"**/.hg",
+		"**/.jj",
+		"**/.repo",
+		"**/CVS",
+		"**/.DS_Store",
+		"**/Thumbs.db",
+		"**/.classpath",
+		"**/bun.lock",
+		"**/.settings"
+	]
 }
