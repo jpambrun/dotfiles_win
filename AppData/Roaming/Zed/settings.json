@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+	"use_auto_surround": false,
+ "sticky_scroll": {
+		"enabled": true
+	},
+	"agent_servers": {
+		"OpenCode": {
+   "type": "custom",
+			"command": "opencode",
+			"args": ["acp"]
+		}
+	},
 	"scrollbar": {
 		"show": "always"
 	},
@@ -31,18 +42,13 @@
 		"dock": "right"
 	},
 	"agent": {
-		"inline_assistant_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-5-mini"
-		},
-		"always_allow_tool_actions": true,
-		"default_profile": "write",
-		"default_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-5-mini"
-		},
-		"model_parameters": []
-	},
+  "default_profile": "write",
+  "default_model": {
+   "provider": "copilot_chat",
+   "model": "grok-code-fast-1"
+  },
+  "model_parameters": []
+ },
 	"auto_update": false,
 	"git": {
 		"inline_blame": {
@@ -59,6 +65,7 @@
 	"show_whitespaces": "trailing",
 	"languages": {
 		"JavaScript": {
+		 "use_on_type_format": false, // 👈 THE FIX
 			"formatter": { "language_server": { "name": "biome" } },
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
@@ -66,6 +73,7 @@
 			}
 		},
 		"TypeScript": {
+		 "use_on_type_format": false, // 👈 THE FIX
 			"formatter": { "language_server": { "name": "biome" } },
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
@@ -73,6 +81,7 @@
 			}
 		},
 		"TSX": {
+		  "use_on_type_format": false, // 👈 THE FIX
 			"formatter": { "language_server": { "name": "biome" } },
 			"code_actions_on_format": {
 				"source.fixAll.biome": true,
@@ -94,13 +103,13 @@
 		"thumb": "always",
 		"show": "never"
 	},
-	"relative_line_numbers": false,
+	"relative_line_numbers": "disabled",
 	"auto_signature_help": false,
-	"helix_mode": true,
+	"helix_mode": false,
 	"vim": {
 		"use_system_clipboard": "never"
 	},
-	"cursor_shape": "block",
+	"cursor_shape": "bar",
 	"ui_font_family": ".ZedSans",
 	"buffer_font_weight": 400.0,
 	"buffer_font_family": "Monaspace Neon",
