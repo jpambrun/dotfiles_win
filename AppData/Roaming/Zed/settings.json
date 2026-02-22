@@ -26,7 +26,8 @@
 	"scroll_beyond_last_line": "one_page",
 	"show_completion_documentation": true,
 	"edit_predictions": {
-		"mode": "subtle"
+		"provider": "copilot",
+  "mode": "subtle"
 	},
 	"diagnostics": {
 		"inline": {
@@ -42,10 +43,11 @@
 		"dock": "right"
 	},
 	"agent": {
+  "always_allow_tool_actions": true,
   "default_profile": "write",
   "default_model": {
    "provider": "copilot_chat",
-   "model": "grok-code-fast-1"
+   "model": "gpt-5-mini"
   },
   "model_parameters": []
  },
@@ -90,7 +92,7 @@
 		},
 		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
 		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
-		"CSS": { "formatter": { "language_server": { "name": "biome" } } }
+		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
 	},
 	"indent_guides": {
 		"background_coloring": "indent_aware",
@@ -140,9 +142,6 @@
 		"catppuccin-icons": true,
 		"codebook": true,
 		"biome": true
-	},
-	"features": {
-		"edit_prediction_provider": "copilot"
 	},
 	"file_scan_exclusions": [
 		"**/.git",

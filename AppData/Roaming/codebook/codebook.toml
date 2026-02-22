@@ -9,6 +9,8 @@ words = [
     "pacs",
     "syntaxes",
     "wgpu",
+    "nats",
+    "superadmin"
 ]
 flag_words = [
     "todo",
